@@ -4,7 +4,7 @@
 
 ## Internship-Inspired Project
 
-During my internship as a Data Analyst at Checkafy, a HongKong-based retail-intelligence provider, I did a lot of manual data validation work to facilitate reinforcement learning of the firm's AI model. With more coding experience from rigorous self-studying, I'd like to take the work I did to the next level -- automate them with code.
+During my internship as a Data Analyst at Checkafy, a Hong-Kong-based retail-intelligence provider, I did a lot of manual data validation work to facilitate reinforcement learning of the firm's AI model. With more coding experience from rigorous self-studying, I'd like to take the work I did to the next level -- automate them with code.
 
 ## Planned Features
 
