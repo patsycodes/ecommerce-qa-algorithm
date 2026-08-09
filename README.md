@@ -14,10 +14,6 @@ During my internship as a Data Analyst at [Checkafy](https://www.checkafy.com/),
   * using text similarity calculations (eg Levenshtein distance)
   * using text embedding (eg Word2Vec)
 
-* **Binary Evaluation of Product Titles**
-  * using established rules that define a "good" product title (eg regex)
-      * check for missing/incorrect specs/brands/volume
-      * check for bad grammar
 
 ## Planned Tech Stack
 
