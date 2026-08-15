@@ -1,24 +1,15 @@
 # ecommerce-qa-algorithm
 
-**Project Status: Active development, coming soon**
+## The Pivot 
+
+This project originally set out to solve the Human-In-The-Loop Quality Assurance inconvenience in manually verifying ecommerce product data. However, during initial research, I identified significant constraints in the ability of generic AI sentence transformers to distinguish between contextually similar products (eg. sparkling water vs natural water). Therefore, the project pivoted to become an **E-Commerce Product Matching Recommendation Engine** instead, which is a foundation for high-throughput, human-supervised data validation at scale.
 
 ## Internship-Inspired Project
 
-During my internship as a Data Analyst at [Checkafy](https://www.checkafy.com/), a Hong-Kong-based retail-intelligence provider, I did a lot of manual data validation work to facilitate reinforcement learning of the firm's AI model. With more coding experience from rigorous self-studying, I'd like to take the work I did to the next level -- automate them with code.
 
-## Planned Features
-
-> more research will be done to confirm the actual features
-
-* **Identify Matching Data Pairs**
-  * using text similarity calculations (eg Levenshtein distance)
-  * using text embedding (eg Word2Vec)
+## Features
 
 
-## Planned Tech Stack
+## Tech Stack
 
-> more research will be done to confirm the actual tech stack
 
-* **Python**: Core programming langauge
-* **PostgreSQL**: Database for result storage
-* **Scikit-learn**: Machine Learning for prediction
