@@ -10,10 +10,10 @@ This project was inspired by my internship as a Data Analyst at [Checkafy](https
 
 ## Pipeline
 
-1. **Web Scraping**: Scraping product titles from a major local e-commerce website, HKTVMall (`webscraping.py`)
-2. **Data Cleaning**: Extracting product brands, specs, and removing fluff to keep titles concise; mostly automated, but requires human-in-the-loop validation for highly ambiguous naming and missing spec (`cleaning.ipynb`)
-3. **Candidate Generation (Bi-Encoder Dense Retrieval)**: Pass cleansed titles to a Sentence Transformer model to compute dense vector embeddings and retrieve the nearest neighbour using cosine similarity. (`matching.py`)
-4. **Candidate Re-ranking (Cross-Encoder Optimisation)**: Funnel candidate pairs into a Hugging Face Cross-Encoder. This layer performs deep self-attention across both titles simultaneously to catch subtle context mismatches that Bi-encoders miss. (`ce.py`)
+1. **Web Scraping**: Scraping product titles from a major local e-commerce website, HKTVMall (`webscraping.py` -> `unmatched.csv`)
+2. **Data Cleaning**: Extracting product brands, specs, and removing fluff to keep titles concise; mostly automated, but requires human-in-the-loop validation for highly ambiguous naming and missing spec (`unmatched.csv` -> `cleaning.ipynb` -> `unmatched_cleaned.csv`)
+3. **Candidate Generation (Bi-Encoder Dense Retrieval)**: Pass cleansed titles to a Sentence Transformer model to compute dense vector embeddings and retrieve the nearest neighbour using cosine similarity. Filtered with threshold to return likely matches (`unmatched_cleaned.csv` -> `matching.py` -> `pairs.csv`)
+4. **Candidate Re-ranking (Cross-Encoder Optimisation)**: Funnel candidate pairs into a Hugging Face Cross-Encoder. This layer performs deep self-attention across both titles simultaneously to catch subtle context mismatches that Bi-encoders miss. (`pairs.csv` -> `ce.py` -> `pairs_ce.csv`)
 5. **Human-Supervised Verification Queue**: Route the high-confidence matches directly to the final CSV file (`pairs_ce.csv`) for fast binary human QA review.
 
 
